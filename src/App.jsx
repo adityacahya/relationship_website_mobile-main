@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom"
 import {Closing, Letter,Passcode,Question,Recap,Timer,Message,Music,Picture} from './components'
 import './index.css'
 function App() {
