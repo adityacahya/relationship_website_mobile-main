@@ -52,7 +52,8 @@ const config = {
       artist: "Cigarettes After Sex", // Artist of the song
       left: "5%", // Positioning on the page
       top: "5%", // Positioning on the page
-      audio: "/audio/bernaung.mp3",
+      audio: `${import.meta.env.BASE_URL}audio/bernaung.mp3`,
+
     },
     {
       title: "The Boy Is Mine",
