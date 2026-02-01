@@ -13,6 +13,7 @@ function Music() {
 
   // 🔊 audio refs (1 audio per song)
   const audioRefs = useRef({});
+  const [audioUnlocked, setAudioUnlocked] = useState(false);
 
   useEffect(() => {
     const loadImages = async () => {
@@ -41,20 +42,22 @@ function Music() {
     loadImages();
   }, []);
 
-  // ▶️ Hover masuk
-  const handleMouseEnter = (song) => {
-    if (!audioRefs.current[song.id]) {
-      audioRefs.current[song.id] = new Audio(song.audio);
-      audioRefs.current[song.id].volume = 0.8;
-    }
-    audioRefs.current[song.id].play();
-  };
+  // 🔊 play / unlock audio
+const playSong = (song) => {
+  if (!audioRefs.current[song.id]) {
+    const audio = new Audio(song.audio);
+    audio.volume = 0.8; // WAJIB 0–1
+    audioRefs.current[song.id] = audio;
+  }
 
-  // ⏸️ Hover keluar (pause, bukan stop)
-  const handleMouseLeave = (song) => {
-    const audio = audioRefs.current[song.id];
-    if (audio) audio.pause();
-  };
+  audioRefs.current[song.id].play().catch(() => {});
+  setAudioUnlocked(true); // 🔓 unlock autoplay
+};
+
+// ⏸️ pause audio
+const pauseSong = (song) => {
+  audioRefs.current[song.id]?.pause();
+};
 
   return (
     <div className="min-h-screen bg-black/20 flex flex-col items-center justify-center">
@@ -69,14 +72,16 @@ function Music() {
         >
           {songs.map((song) => (
             <motion.div
-              key={song.id}
-              className="absolute"
-              style={{ left: song.left, top: song.top }}
-              drag
-              dragConstraints={containerRef}
-              onMouseEnter={() => handleMouseEnter(song)}
-              onMouseLeave={() => handleMouseLeave(song)}
-            >
+  key={song.id}
+  className="absolute"
+  style={{ left: song.left, top: song.top }}
+  drag
+  dragConstraints={containerRef}
+
+  onClick={() => playSong(song)}                     // 🔑 WAJIB (unlock)
+  onMouseEnter={() => audioUnlocked && playSong(song)}
+  onMouseLeave={() => pauseSong(song)}
+>
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 flex items-center gap-4 w-56 h-[4rem] cursor-pointer hover:bg-white/20 transition">
                 <div className="w-12 h-12">
                   <img
