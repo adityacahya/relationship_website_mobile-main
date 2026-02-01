@@ -45,7 +45,7 @@ function Music() {
   const handleMouseEnter = (song) => {
     if (!audioRefs.current[song.id]) {
       audioRefs.current[song.id] = new Audio(song.audio);
-      audioRefs.current[song.id].volume = 10;
+      audioRefs.current[song.id].volume = 0.8;
     }
     audioRefs.current[song.id].play();
   };
