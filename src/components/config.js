@@ -6,11 +6,11 @@ const config = {
   */
 
   // 🔐 Passcode Page
-  correctPasscode: "0000", // Change this to any 4-digit code (the passcode for access)
-  passcodeTitle: "Enter Passcode", // Title displayed on the passcode entry page
+  correctPasscode: "2112", // Change this to any 4-digit code (the passcode for access)
+  passcodeTitle: "Enter Passcode hint: tanggal bulan jadian kita", // Title displayed on the passcode entry page
   successMessage: "Yayy!! :)", // Message shown upon successful passcode entry
   redirectMessage: "Redirecting...", // Message displayed while redirecting after success
-  incorrectPasscodeMessage: "Incorrect passcode, hint: our anniversary date!", // Message shown for incorrect passcode
+  incorrectPasscodeMessage: "Incorrect passcode, hint: tanggal bulan jadian kita hmmm", // Message shown for incorrect passcode
   cancelButtonText: "Cancel", // Text for the cancel button
 
   // 🔍 Question Page
@@ -18,13 +18,13 @@ const config = {
   trendingTitle: "Trending searches", // Title for the trending searches section
   trendingSearches: [
     "Why is my bf so cute?", // Example trending search query
-    "Why does Rheina love him more?", // Another example query
-    `Rheina's birthdate (coz her bf forgets)`, // A personalized trending search
+    "Why does Rizka love him more?", // Another example query
+    `Rizka Sayang Aditya kan ya ?`, // A personalized trending search
   ],
-  proTip: 'Pro tip: try searching "How long have we been together?" ;)', // Helpful tip for users
+  proTip: 'Pro tip: ketik "How long have we been together?" ;)', // Helpful tip for users
 
   // ⏳ Timer Page
-  anniversaryDate: "2024-10-18", // 📅 Set your anniversary date here (used for the timer)
+  anniversaryDate: "2025-12-21", // 📅 Set your anniversary date here (used for the timer)
   timerTitle: "We've been together for:", // Title displayed on the timer page
   timerMessage: "... and still counting <3", // Message shown alongside the timer
   timeUnits: {
@@ -48,76 +48,83 @@ const config = {
   musicTitle: "Songs that remind me of you", // Title for the music page
   musicGallery: [
     {
-      title: "Heavenly", // Title of the song
-      artist: "Cigarettes After Sex", // Artist of the song
+      title: "Kota ini tak sama tanpamu", // Title of the song
+      artist: "Nadhif Basalamah (with Aziz Harun & Aisha Retno)", // Artist of the song
       left: "5%", // Positioning on the page
       top: "5%", // Positioning on the page
       audio: `${import.meta.env.BASE_URL}audio/bernaung.mp3`,
 
     },
     {
-      title: "The Boy Is Mine",
-      artist: "Brandy, Monica",
-      left: "40%",
-      top: "15%",
+      title: "Masa Ini, Nanti, dan Masa Indah Lainnya", // Title of the song
+      artist: "Nuca", // Artist of the song
+      left: "15%", // Positioning on the page
+      top: "15%", // Positioning on the page
+      audio: `${import.meta.env.BASE_URL}audio/masa ini.mp3`,
     },
     {
-      title: "Die With A Smile",
-      artist: "Lady Gaga, Bruno Mars",
-      left: "15%",
-      top: "40%",
+      title: "Bernaung", // Title of the song
+      artist: "Feby Putri", // Artist of the song
+      left: "5%", // Positioning on the page
+      top: "25%", // Positioning on the page
+      audio: `${import.meta.env.BASE_URL}audio/naung.mp3`,
     },
     {
-      title: "Last Night on Earth",
-      artist: "Green Day",
-      left: "30%",
-      top: "75%",
+      title: "Bahagia Lagi", // Title of the song
+      artist: "Piche Kota", // Artist of the song
+      left: "15%", // Positioning on the page
+      top: "35%", // Positioning on the page
+      audio: `${import.meta.env.BASE_URL}audio/bahagia.mp3`,
     },
     {
-      title: "American Boy",
-      artist: "Estelle, Kanye West",
-      left: "5%",
-      top: "65%",
+      title: "Bersenja Gurau", // Title of the song
+      artist: "Raim Laode", // Artist of the song
+      left: "5%", // Positioning on the page
+      top: "45%", // Positioning on the page
+      audio: `${import.meta.env.BASE_URL}audio/senja.mp3`,
     },
     {
-      title: "Sparks",
-      artist: "Coldplay",
-      left: "25%",
-      top: "90%",
+      title: "bergema sampai selamanya", // Title of the song
+      artist: "Nadhif Basalamah", // Artist of the song
+      left: "15%", // Positioning on the page
+      top: "55%", // Positioning on the page
+      audio: `${import.meta.env.BASE_URL}audio/gema.mp3`,
     },
     {
-      title: "Kiss Me Thru The Phone",
-      artist: "Soulja Boy, Sammie",
-      left: "35%",
-      top: "50%",
+      title: "Sedia Aku Sebelum Hujan", // Title of the song
+      artist: "Idgitaf ", // Artist of the song
+      left: "5%", // Positioning on the page
+      top: "65%", // Positioning on the page
+      audio: `${import.meta.env.BASE_URL}audio/sedia.mp3`,
     },
     {
-      title: "Sunsetz",
-      artist: "Cigarettes After Sex",
-      left: "10%",
-      top: "25%",
+      title: "Kasih Tau Mama (Malam Minggu)", // Title of the song
+      artist: "Koplo", // Artist of the song
+      left: "15%", // Positioning on the page
+      top: "75%", // Positioning on the page
+      audio: `${import.meta.env.BASE_URL}audio/mama.mp3`,
     },
   ],
 
     // 📝 Message Recap Page
     messageTitle: "Our Messages", // Title for the messages recap page
     messageGallery: [
-      { title: "September 3, 2024", description: "A beautiful day to remember." }, // Message entry
-      { title: "October 5, 2024", description: "Cherishing moments together." },
-      { title: "December 25, 2024", description: "Christmas with love ❤️" },
+      { title: "Beautiful Sunrise", description: "Sayang, terima kasih yaa sudah hadir dalam hidupku, kalo ngga sama sayang, aku manatau bisa liat sunrise secantik ini bersama wanita yg sangaattt cantik" }, // Message entry
+      { title: "My Lovely Girl", description: "Ngeliat wajah sayang tuh tenang bgt yaa, dan aku sukaaa liatinnyaa... kayakk setelah menghadapi berbagai masalah hari ini dan ketila liat sayang langsung nyesss tenaanggg bgttt masyaAllah" },
+      { title: "Beautiful Girl", description: "Daaannn sangat tuh cantiiikkk bgtttt masyaAllah, aku seneeengggg bgt liatinnya dan bersyukur bgt dipertemukan sayang" },
     ],
   
     // 📸 Picture Recap Page
     pictureTitle: "Our Pictures", // Title for the pictures recap page
     pictureGallery: [
-      { title: "January 1, 2024", description: "New Year's Celebration 🎉" }, // Picture entry
-      { title: "February 14, 2024", description: "Valentine's Day 💕" },
-      { title: "March 10, 2024", description: "Beach trip memories 🏖️" },
+      { title: "December 12, 2025", description: "Hari Pertama Kita Ketemu" }, // Picture entry
+      { title: "December 21, 2025", description: "Hari Jadian Kita" },
+      { title: "December 15, 2025", description: "Cengklik wkwkk" },
     ],
   
 
   // 💌 Love Letter Page
-  loveLetterMessage: "Hi, I love you so much💖", // Message displayed on the love letter page
+  loveLetterMessage: "haloo sayang, maaf yaa aku cuma bisa hadir secara virtual dan kasih ini aja, selamat hari kasih sayang yaa sayaangg, i love u <3", // Message displayed on the love letter page
 
   // 🎇 Closing Page
   closingMessage: "Thank you for everything, my love! 💖 Wishing us many more wonderful years together.", // Closing message displayed
