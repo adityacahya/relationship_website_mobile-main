@@ -21,7 +21,7 @@ const config = {
     "Why does Rizka love him more?", // Another example query
     `Rizka Sayang Aditya kan ya ?`, // A personalized trending search
   ],
-  proTip: 'Pro tip: ketik "How long have we been together?" ;)', // Helpful tip for users
+  proTip: 'Pro tip: ketik atau copas "How long have we been together?" ;)', // Helpful tip for users
 
   // ⏳ Timer Page
   anniversaryDate: "2025-12-21", // 📅 Set your anniversary date here (used for the timer)
